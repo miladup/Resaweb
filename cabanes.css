@@ -1,0 +1,216 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background-color: rgb(245, 230, 203);
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+nav {
+    margin-top: 5vh;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    min-width: 700px;
+    backdrop-filter: blur(1000px);
+    border-radius: 30px;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 20px;
+    background-color: white;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    color: rgb(48, 29, 29);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.10em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    font-size: 1.48rem;
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.nav-link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(37, 22, 22);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-link:hover:after {
+    width: 80%;
+    left: 10%;
+}
+
+.logo {
+    margin-right: auto;
+    width: 160px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+h1, h2{
+    font-family: 'Happy Camper', sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content; 
+    margin-top: 8vh;
+    font-size: 2.6rem;
+    margin-bottom: 8vh;
+    color: rgb(34, 67, 34);
+}
+
+h2 {
+    color: #C25400;
+}
+
+/*slider début*/
+
+.block {
+    display: flex;
+    background-color: white;
+    padding: 1em;
+    max-width: 1100px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    margin-bottom: 5vh;
+}
+
+.slider-img {
+    display: none;
+    border-radius: 20px;
+    height: 140px;
+}
+
+
+h3 {
+    margin: 0;
+}
+
+@media (width>=600px) {
+    .block {
+        align-items: flex-start;
+        /* pour éviter que les images s'étirent en hauteur */
+    }
+
+    img {
+         /* les images deviennent visibles*/
+        display: block;
+        width: 30%;
+        margin-right: 1rem;
+    }
+}
+
+
+.block {
+    display: flex;
+    background-color: white;
+    padding: 1em;
+    max-width: 1000px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    margin-bottom: 5vh;
+}
+
+.image-slider {
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    margin-right: 1rem;
+    border-radius: 20px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+
+.slider-img {
+    min-width: 100%;
+    transition: opacity 0.4s ease;
+    display: none;
+    border-radius: 20px;
+}
+
+.slider-img.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 3px;
+}
+
+.next {
+    right: 5px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (width>=600px) {
+    .block {
+        align-items: flex-start;
+    }
+
+    .image-slider {
+        display: block;
+    }
+}
+
+/*slider fin*/

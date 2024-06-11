@@ -1,0 +1,424 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background-color: rgb(247, 237, 220);
+    scroll-behavior: smooth;
+}
+
+header {
+    background-attachment: fixed;
+    background-image: url(photos/fond.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+nav {
+    margin-top: 5vh;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    min-width: 700px;
+    backdrop-filter: blur(1000px);
+    border-radius: 30px;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.10em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    font-size: 1.48rem;
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.nav-link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-link:hover:after {
+    width: 80%;
+    left: 10%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    color: white;
+    align-self: flex-start;
+    margin-top: 30vh;
+    font-size: 6rem;
+    font-family: 'Happy Camper', sans-serif;
+    padding: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.accroche {
+    color: white;
+    margin-top: 0;
+    font-size: 2.1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+}
+
+.logo {
+    margin-right: auto;
+    width: 160px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    margin: 3vh;
+    margin-bottom: 0;
+}
+
+.card {
+    border-radius: 30px;
+    flex-basis: 33.3333%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    transition: transform 0.4s ease;
+}
+
+.card h3 {
+    position: absolute;
+    top: 3vw;
+    left: 3vw;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 3vw;
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.card p {
+    padding-left: 20px;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+.card a {
+    display: block;
+    padding-left: 20px;
+    color: #C25400;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    padding-top: 3px;
+    font-family: 'Happy Camper', sans-serif;
+    letter-spacing: 0.10em;
+}
+
+.card:hover img {
+    filter: brightness(50%);
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+span {
+    color: #C25400;
+}
+
+.section-1 {
+    height: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: 'Happy Camper', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    color: rgb(34, 67, 34);
+}
+
+.text {
+    margin: 0 15vh 0 15vh;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.style {
+    text-align: center;
+    font-family: 'Happy Camper', sans-serif;
+    font-size: 2.4em;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: rgb(34, 67, 34);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+hr {
+    position: relative;
+    color: white;
+    margin-top: 10px;
+    margin-left: -70px;
+    height: 2px;
+}
+
+.titre2 {
+    padding-top: 0;
+    padding-bottom: 60px;
+    color: #C25400;
+}
+
+.section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 10vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 60px;
+    row-gap: 30px;
+    width: 70%;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.cdc {
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cdc a {
+    color: #C25400;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    font-family: 'Happy Camper', sans-serif;
+    letter-spacing: 0.10em;
+    margin-left: auto;
+}
+
+.cdc p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.image-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 80%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+
+.slider-img {
+    min-width: 100%;
+    transition: opacity 0.4s ease;
+    display: none;
+    border-radius: 30px;
+}
+
+.slider-img.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 15px; 
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+    }
+}
+
+.container {
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    padding-bottom: 0;
+    background-color: #ffffff;
+}
+
+.text-section {
+    flex: 1;
+    padding: 40px;
+}
+
+.text-section h4 {
+    font-size: 2.5em;
+    color: #333333;
+    margin-bottom: 20px;
+    font-family: 'Happy Camper', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    margin-top: 20vh;
+    padding: 20px;
+    margin-bottom: 10vh;
+    text-align: center;
+}
+
+.text-section .highlight {
+    color: #C25400;
+}
+
+.text-section p {
+    font-size: 1.2em;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.text-section a {
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.text-section a:hover {
+    background-color: #555555;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
