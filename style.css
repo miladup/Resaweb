@@ -199,9 +199,11 @@ span {
 }
 
 .section-1 {
-    height: auto;
-    padding: 20px;
-    margin-bottom: 20px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 h2 {
@@ -215,11 +217,15 @@ h2 {
 }
 
 .text {
-    margin: 0 15vh 0 15vh;
+    margin: 0 35vh 0 35vh;
     font-family: "Nunito", sans-serif;
     font-weight: 600;
     text-align: center;
     font-size: 1.5rem;
+}
+
+.categorie {
+    height: 80vh;
 }
 
 .style {
@@ -227,7 +233,7 @@ h2 {
     font-family: 'Happy Camper', sans-serif;
     font-size: 2.4em;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     color: rgb(34, 67, 34);
 }
 
