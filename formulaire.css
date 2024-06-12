@@ -1,0 +1,97 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background: rgb(247, 237, 220);
+    width: 400px;
+    color: rgb(34, 67, 34);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    border: solid 5px #C25400;
+}
+
+legend {
+    font-size: 30px;
+    padding-top: 20px;
+    color: rgb(34, 67, 34);
+    font-family: 'Happy Camper', sans-serif;
+}
+
+input[type="submit"] {
+    background-color: rgb(34, 67, 34);
+    font-size: 1rem ;
+    color: rgb(247, 237, 220);
+    border: solid rgb(34, 67, 34) 1.5px;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-family: 'Happy Camper', sans-serif;
+    letter-spacing: 1px;
+}
+
+input[type="submit"]:hover {
+    color: rgb(34, 67, 34);
+    background-color: rgb(247, 237, 220);
+    transition: 0.5s;
+}
+
+.inputBox {
+    position: relative;
+    width: 250px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid rgb(34, 67, 34);
+    background: rgb(247, 237, 220);
+    border-radius: 5px;
+    outline: none;
+    color: rgb(34, 67, 34);
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox label {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: #C25400;
+    transition: 0.5s;
+    font-family: "Nunito", sans-serif;
+}
+
+.inputBox input:valid ~ label,
+.inputBox input:focus ~ label {
+    color: rgb(34, 67, 34);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.75em;
+    padding: 0 10px;
+    background: rgb(247, 237, 220);
+    letter-spacing: 0.2em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+    border: 2px solid rgb(34, 67, 34);
+}
+
+input[type="date"] {
+    color: beige;
+    transition: color 0.5s;
+}
+
+input[type="date"]:focus {
+    color: rgb(34, 67, 34);
+}
