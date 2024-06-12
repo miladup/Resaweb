@@ -1,0 +1,107 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background-color: #f5e6cb;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Happy Camper', sans-serif;
+    font-size: 2.4rem;
+}
+
+.back-button {
+    background-color: #c25400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.thumbnails img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.description {
+    max-width: 600px;
+    text-align: center;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.reserve-button {
+    background-color: #c25400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.reserve-button:hover {
+    background-color: #a64400;
+}
+
+.all {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10vh;
+    align-items: center;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+}

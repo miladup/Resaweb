@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservation.css">
+    <title>Réservation</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Cabane...</h1>
+            <button class="back-button" onclick="window.history.back()">Retour</button>
+        </div>
+    </header>
+    <main>
+        <section class="all">
+            <section class="images">
+                <section class="main-image">
+                    <img id="main-img" src="photos/accueil.webp" alt="Main Image">
+                </section>
+                <section class="thumbnails">
+                    <img class="thumbnail" src="photos/accueil.webp" alt="Thumbnail 1" onclick="changeMainImage(this)">
+                    <img class="thumbnail" src="photos/chêne-1.jpeg" alt="Thumbnail 2" onclick="changeMainImage(this)">
+                    <img class="thumbnail" src="photos/forêt-1.jpeg" alt="Thumbnail 3" onclick="changeMainImage(this)">
+                </section>
+            </section>
+            <section class="description">
+                <h2>Cabane...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, necessitatibus quasi a, sit quibusdam recusandae ex fuga tempora natus maxime rem odio? Sunt similique fuga nihil asperiores sit dolores veritatis.</p>
+                <div class="price">
+                    <span>127.00€/pers</span>
+                    <button class="reserve-button">Je réserve</button>
+                </div>
+            </section>
+        </section>
+    </main>
+<script>
+    function changeMainImage(element) {
+        document.getElementById('main-img').src = element.src;
+    }
+</script>
+</body>
+</html>
+
