@@ -104,6 +104,7 @@ h2 {
 .services {
     max-width: 940px;
     margin: 0 auto;
+    margin-bottom: 11vh;
 }
   
 .services > div {

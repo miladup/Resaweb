@@ -72,7 +72,7 @@
         // Connexion à la base de données
         $servername = "localhost";
         $username = "root";
-        $password = "";
+        $password = "root";
         $dbname = "resaweb";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -82,7 +82,7 @@
         }
 
         // IDs des cabanes coups de coeur
-        $ids = [2, 3, 4, 6, 8, 9];
+        $ids = [1, 2, 3, 4, 5, 9];
         $ids_str = implode(',', $ids);
 
         // Requête SQL pour récupérer les informations des cabanes coups de coeur
@@ -110,7 +110,7 @@
                         <h3><?php echo $row['nom_cabane']; ?></h3>
                     </div>
                     <p><?php echo number_format($row['prix_par_nuit'], 2); ?>€/nuit</p>
-                    <a href="reservation.php?id=<?php echo $row['id_cabane']; ?>">Voir plus</a>
+                    <a href="details.php?id=<?php echo $row['id_cabane']; ?>">Voir plus</a>
                 </div>
                 <?php
             }
@@ -135,6 +135,7 @@
     </div>
 </div>
 
+<div id="footer-placeholder"></div>
 <script src="script.js"></script>
 </body>
 </html>

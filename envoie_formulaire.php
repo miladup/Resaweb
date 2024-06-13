@@ -1,26 +1,23 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "resaweb";
 
 // Créer une connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Vérifier la connexion
 if ($conn->connect_error) {
     die("Connexion échouée : " . $conn->connect_error);
 }
 
-// Fonction pour calculer le nombre de jours entre deux dates
+// Calcul du nombre de jours entre deux dates
 function dateDiffInDays($date1, $date2) {
     $diff = strtotime($date2) - strtotime($date1);
     return abs(round($diff / 86400));
 }
 
-// Vérifier si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
     $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
     $email = $_POST['email'];
@@ -41,11 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // L'utilisateur existe déjà
         $row = $result->fetch_assoc();
         $id_utilisateur = $row['id_utilisateur'];
     } else {
-        // Insérer un nouvel utilisateur
         $sql = "INSERT INTO utilisateurs (prenom, nom, email, numero_telephone) VALUES (?, ?, ?, '')";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sss", $prenom, $nom, $email);
@@ -57,7 +52,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Insérer la réservation
     $sql = "INSERT INTO reservations (id_utilisateur, id_cabane, date_arrive, date_depart, prix_total) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("iissi", $id_utilisateur, $id_cabane, $date_debut, $date_fin, $prix_total);

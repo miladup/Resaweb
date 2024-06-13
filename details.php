@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "resaweb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -66,10 +66,11 @@ $cabane = $result->fetch_assoc();
                 </section>
             </section>
             <section class="description">
-                <h2><?php echo $cabane['nom_cabane']; ?></h2>
+                <h1><?php echo $cabane['nom_cabane']; ?></h1>
                 <p><?php echo $cabane['description_cabane']; ?></p>
                 <div class="price">
-                    <span><?php echo number_format($cabane['prix_par_nuit'], 2); ?>€/nuit</span>
+                    <span><?php echo number_format($cabane['prix_par_nuit'], 2); ?>€/nuit,</span>
+                    <span class="max-persons">max <?php echo $cabane['max_personnes']; ?> pers</span>
                     <a href="formulaire.php?id=<?php echo $cabane['id_cabane']; ?>&prix=<?php echo $cabane['prix_par_nuit']; ?>" class="reserve-button">Je réserve</a>
                 </div>
             </section>

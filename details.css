@@ -98,7 +98,9 @@ nav {
 h1 {
     margin: 0;
     font-family: 'Happy Camper', sans-serif;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: rgb(34, 67, 34);
 }
 
 .back-button {
@@ -151,14 +153,21 @@ main {
 
 .price {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
 .price span {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.max-persons {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(34, 67, 34);
+    margin-left: 20px; 
 }
 
 .reserve-button {
@@ -170,10 +179,12 @@ main {
     cursor: pointer;
     border-radius: 5px;
     font-size: 1rem;
+    margin-left: auto; 
 }
 
 .reserve-button:hover {
     background-color: #a64400;
+    transition: 0.4s;
 }
 
 .all {
@@ -187,4 +198,8 @@ main {
 .images {
     display: flex;
     flex-direction: column;
+}
+
+p {
+    margin-bottom: 50px;
 }
