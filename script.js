@@ -33,3 +33,44 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlides(slider, 0);
     });
 });
+
+//  tri cabanes
+
+function sortCabanes() {
+    const sortBy = document.getElementById('sort').value;
+    const cabanesContainer = document.getElementById('cabanes-container');
+    const categories = Array.from(cabanesContainer.getElementsByClassName('category'));
+
+    categories.forEach(category => {
+        const blocks = Array.from(category.getElementsByClassName('block'));
+        blocks.sort((a, b) => {
+            const aValue = a.dataset[sortBy];
+            const bValue = b.dataset[sortBy];
+
+            if (sortBy === 'nom_cabane') {
+                return aValue.localeCompare(bValue);
+            } else {
+                return parseFloat(aValue) - parseFloat(bValue);
+            }
+        });
+        blocks.forEach(block => {
+            category.appendChild(block);
+        });
+    });
+}
+
+// raccourcir le texte
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed');
+    truncateDescriptions(200);
+});
+
+function truncateDescriptions(maxLength) {
+    const descriptions = document.getElementsByClassName('description');
+    Array.from(descriptions).forEach(description => {
+        if (description.textContent.length > maxLength) {
+            description.textContent = description.textContent.substring(0, maxLength) + '...';
+        }
+    });
+}

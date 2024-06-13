@@ -118,7 +118,9 @@ h2 {
 .slider-img {
     display: none;
     border-radius: 20px;
-    height: 140px;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
 }
 
 
@@ -126,14 +128,12 @@ h3 {
     margin: 0;
 }
 
-@media (width>=600px) {
+@media (min-width: 600px) {
     .block {
         align-items: flex-start;
-        /* pour éviter que les images s'étirent en hauteur */
     }
 
     img {
-         /* les images deviennent visibles*/
         display: block;
         width: 30%;
         margin-right: 1rem;
@@ -156,7 +156,7 @@ h3 {
 .image-slider {
     position: relative;
     overflow: hidden;
-    width: 30%;
+    width: 50%;
     margin-right: 1rem;
     border-radius: 20px;
 }
@@ -172,6 +172,8 @@ h3 {
     transition: opacity 0.4s ease;
     display: none;
     border-radius: 20px;
+    object-fit: cover;
+    height: 100%;
 }
 
 .slider-img.active {
@@ -203,7 +205,7 @@ h3 {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media (width>=600px) {
+@media (min-width: 600px) {
     .block {
         align-items: flex-start;
     }
