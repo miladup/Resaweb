@@ -2,6 +2,84 @@
     box-sizing: border-box;
 }
 
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+nav {
+    margin-top: 5vh;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    min-width: 700px;
+    backdrop-filter: blur(1000px);
+    border-radius: 30px;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 20px;
+    background-color: rgb(247, 237, 220);
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    color: rgb(48, 29, 29);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.10em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    font-size: 1.48rem;
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.nav-link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(37, 22, 22);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-link:hover:after {
+    width: 80%;
+    left: 10%;
+}
+
+.logo {
+    margin-right: auto;
+    width: 160px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
 form {
     display: flex;
     margin: auto;
