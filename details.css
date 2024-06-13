@@ -1,0 +1,190 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background-color: #f5e6cb;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+nav {
+    margin-top: 5vh;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    min-width: 700px;
+    backdrop-filter: blur(1000px);
+    border-radius: 30px;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 20px;
+    background-color: white;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    color: rgb(48, 29, 29);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.10em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    font-size: 1.48rem;
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.nav-link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(37, 22, 22);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-link:hover:after {
+    width: 80%;
+    left: 10%;
+}
+
+.logo {
+    margin-right: auto;
+    width: 160px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Happy Camper', sans-serif;
+    font-size: 2.4rem;
+}
+
+.back-button {
+    background-color: #c25400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.thumbnails img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.description {
+    max-width: 600px;
+    text-align: center;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.reserve-button {
+    text-decoration: none;
+    background-color: #c25400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.reserve-button:hover {
+    background-color: #a64400;
+}
+
+.all {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10vh;
+    align-items: center;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+}
