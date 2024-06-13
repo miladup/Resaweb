@@ -192,6 +192,7 @@ h1 {
 
 .card a:hover {
     text-decoration: underline;
+    transition: 0.4s;
 }
 
 span {
@@ -296,6 +297,11 @@ hr {
     letter-spacing: 0.10em;
     margin-left: auto;
     padding-right: 20px;
+}
+
+.cdc a:hover {
+    text-decoration: underline;
+    transition: 0.4s;
 }
 
 .cdc p {
@@ -445,4 +451,8 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.contain {
+    background-color: rgb(247, 237, 220)
 }
