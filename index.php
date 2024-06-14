@@ -17,7 +17,7 @@
         <nav>
             <a href="index.php">
                 <span class="sr-only">Retour à l'accueil</span>
-                <img class="logo" src="photos/logo-long-blanc.png" alt="">
+                <img class="logo" src="photos/logo-long-blanc.png" alt="Accueil">
             </a>
             <ul class="nav">
                 <li><a class="nav-link" href="cabanes.php">Nos cabanes</a></li>
@@ -49,6 +49,7 @@
         <div class="card" onclick="location.href='cabanes.php#nature'">
             <div class="image-container">
                 <img src="photos/foret-1.jpeg" alt="Nature">
+
                 <h3>Nature<hr></h3>
             </div>
             <p>Reconnectez-vous à la nature</p>

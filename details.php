@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "duperrier";
-$password = "zj5CdWswqs6MTqZ";
-$dbname = "duperrier_resaweb";
+$username = "root";
+$password = "root";
+$dbname = "resaweb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -42,7 +42,7 @@ $cabane = $result->fetch_assoc();
             <nav>
                 <a href="index.php">
                     <span class="sr-only">Retour à l'accueil</span>
-                    <img class="logo" src="photos/logo-long-marron.png" alt="Logo">
+                    <img class="logo" src="photos/logo-long-marron.png" alt="Accueil">
                 </a>
                 <ul class="nav">
                     <li><a class="nav-link" href="cabanes.php">Nos cabanes</a></li>

@@ -22,7 +22,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <nav>
             <a href="index.php">
                 <span class="sr-only">Retour à l'accueil</span>
-                <img class="logo" src="photos/logo-long-marron.png" alt="">
+                <img class="logo" src="photos/logo-long-marron.png" alt="Accueil">
             </a>
             <ul class="nav">
                 <li><a class="nav-link <?php if ($current_page == 'cabanes.php') echo 'active'; ?>" href="cabanes.php">Nos cabanes</a></li>
