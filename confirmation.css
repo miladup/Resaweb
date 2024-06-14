@@ -1,0 +1,52 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background-color: rgb(247, 237, 220);
+}
+
+.confirmation-container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background: rgb(247, 237, 220);
+    width: 400px;
+    color: rgb(34, 67, 34);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    border: solid 5px #C25400;
+    text-align: center;
+}
+
+.confirmation-container h1 {
+    font-size: 2rem;
+    color: rgb(34, 67, 34);
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.confirmation-container p {
+    font-size: 1rem;
+    color: rgb(34, 67, 34);
+}
+
+.button {
+    background-color: rgb(34, 67, 34);
+    color: rgb(247, 237, 220);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.button:hover {
+    background-color: rgb(26, 51, 26);
+    transition: 0.5s;
+}

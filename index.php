@@ -21,8 +21,8 @@
             </a>
             <ul class="nav">
                 <li><a class="nav-link" href="cabanes.php">Nos cabanes</a></li>
-                <li><a class="nav-link" href="services.html">Services</a></li>
-                <li><a class="nav-link" href="apropos.html">A propos</a></li>
+                <li><a class="nav-link" href="services.php">Services</a></li>
+                <li><a class="nav-link" href="apropos.php">A propos</a></li>
             </ul>
         </nav>
     </div>
@@ -69,11 +69,11 @@
     <h2 class="titre2">Nos coups de coeur <3</h2>
     <div class="grid-container">
         <?php
-        // Connexion à la base de données
+
         $servername = "localhost";
-        $username = "root";
-        $password = "root";
-        $dbname = "resaweb";
+        $username = "duperrier";
+        $password = "zj5CdWswqs6MTqZ";
+        $dbname = "duperrier_resaweb";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -81,11 +81,15 @@
             die("Connexion échouée : " . $conn->connect_error);
         }
 
+        // charset UTF-8
+        $conn->set_charset("utf8");
+        
+
         // IDs des cabanes coups de coeur
         $ids = [1, 2, 3, 4, 5, 9];
         $ids_str = implode(',', $ids);
 
-        // Requête SQL pour récupérer les informations des cabanes coups de coeur
+        // Requête pour récupérer les informations des cabanes coups de coeur
         $sql = "SELECT cabanes.*, GROUP_CONCAT(photos.nom_photo SEPARATOR ',') AS photos
                 FROM cabanes
                 LEFT JOIN photos ON cabanes.id_cabane = photos.id_cabane
@@ -118,7 +122,7 @@
             echo "<p>Aucune cabane trouvée.</p>";
         }
 
-        // Fermer la connexion
+
         $conn->close();
         ?>
     </div>

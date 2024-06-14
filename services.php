@@ -1,3 +1,7 @@
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,9 +25,9 @@
                 <img class="logo" src="photos/logo-long-marron.png" alt="">
             </a>
             <ul class="nav">
-                <li><a class="nav-link" href="cabanes.php">Nos cabanes</a></li>
-                <li><a class="nav-link" href="services.html">Services</a></li>
-                <li><a class="nav-link" href="apropos.html">A propos</a></li>
+                <li><a class="nav-link <?php if ($current_page == 'cabanes.php') echo 'active'; ?>" href="cabanes.php">Nos cabanes</a></li>
+                <li><a class="nav-link <?php if ($current_page == 'services.php') echo 'active'; ?>" href="services.php">Services</a></li>
+                <li><a class="nav-link <?php if ($current_page == 'apropos.php') echo 'active'; ?>" href="apropos.php">A propos</a></li>
             </ul>
         </nav>
     </div>

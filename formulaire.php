@@ -1,19 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "resaweb";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connexion échouée : " . $conn->connect_error);
-}
-
-$id_cabane = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-$prix_par_nuit = isset($_GET['prix']) ? (float)$_GET['prix'] : 0.0;
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -37,8 +21,8 @@ $prix_par_nuit = isset($_GET['prix']) ? (float)$_GET['prix'] : 0.0;
                 </a>
                 <ul class="nav">
                     <li><a class="nav-link" href="cabanes.php">Nos cabanes</a></li>
-                    <li><a class="nav-link" href="services.html">Services</a></li>
-                    <li><a class="nav-link" href="apropos.html">A propos</a></li>
+                    <li><a class="nav-link" href="services.php">Services</a></li>
+                    <li><a class="nav-link" href="apropos.php">A propos</a></li>
                 </ul>
             </nav>
         </div>
@@ -73,6 +57,7 @@ $prix_par_nuit = isset($_GET['prix']) ? (float)$_GET['prix'] : 0.0;
 
         <input type="hidden" name="id_cabane" value="<?php echo $id_cabane; ?>">
         <input type="hidden" name="prix_par_nuit" value="<?php echo $prix_par_nuit; ?>">
+        <input type="hidden" name="nom_cabane" value="<?php echo $nom_cabane; ?>">
   
         <input type="submit" name="submit" id="Envoi" value="Envoyer">
     </form>
@@ -80,8 +65,9 @@ $prix_par_nuit = isset($_GET['prix']) ? (float)$_GET['prix'] : 0.0;
     <!-- JavaScript pour la couleur des champs de date -->
     <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // 1.a : Interactivité dans les formulaires
         const dateInputs = document.querySelectorAll('input[type="date"]');
-        
+
         dateInputs.forEach(input => {
             input.addEventListener('focus', function() {
                 this.style.color = 'black';
@@ -94,9 +80,6 @@ $prix_par_nuit = isset($_GET['prix']) ? (float)$_GET['prix'] : 0.0;
         });
     });
     </script>
+    <div id="footer-placeholder"></div>
 </body>
 </html>
-
-<?php
-$conn->close();
-?>

@@ -1,17 +1,16 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "resaweb";
+$username = "duperrier";
+$password = "zj5CdWswqs6MTqZ";
+$dbname = "duperrier_resaweb";
 
-// Créer une connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connexion échouée : " . $conn->connect_error);
 }
 
-// Calcul du nombre de jours entre deux dates
+// Calcul du nombre de jours entre les deux dates
 function dateDiffInDays($date1, $date2) {
     $diff = strtotime($date2) - strtotime($date1);
     return abs(round($diff / 86400));
@@ -25,8 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date_fin = $_POST['date_fin'];
     $id_cabane = (int)$_POST['id_cabane'];
     $prix_par_nuit = (float)$_POST['prix_par_nuit'];
+    $nom_cabane = $_POST['nom_cabane'];
 
-    // Calculer le prix total
+    // Calcul du prix total
     $nb_nuits = dateDiffInDays($date_debut, $date_fin);
     $prix_total = $nb_nuits * $prix_par_nuit;
 
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Bonjour $prenom $nom,</p>
             <p>Merci pour votre réservation à notre cabane. Voici les détails de votre réservation :</p>
             <ul>
-                <li>Cabane: $id_cabane</li>
+                <li>Cabane: $nom_cabane</li>
                 <li>Date de début: $date_debut</li>
                 <li>Date de fin: $date_fin</li>
                 <li>Prix total: " . number_format($prix_total, 2) . "€</li>
@@ -81,16 +81,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: lescabanes00@gmail.com" . "\r\n";
 
-        if (mail($to, $subject, $message, $headers)) {
-            echo "Réservation réussie et email de confirmation envoyé.";
-        } else {
-            echo "Réservation réussie, mais l'envoi de l'email a échoué.";
-            echo("Email failed to send to $to. Subject: $subject");
-        }
+        mail($to, $subject, $message, $headers);
+        
+        header("Location: confirmation.html");
+        exit();
     } else {
         echo "Erreur: " . $sql . "<br>" . $conn->error;
     }
-    
+
     $stmt->close();
 }
 

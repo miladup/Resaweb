@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "resaweb";
+$username = "duperrier";
+$password = "zj5CdWswqs6MTqZ";
+$dbname = "duperrier_resaweb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

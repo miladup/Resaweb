@@ -1,14 +1,16 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "resaweb";
+$username = "duperrier";
+$password = "zj5CdWswqs6MTqZ";
+$dbname = "duperrier_resaweb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connexion échouée : " . $conn->connect_error);
 }
+
+$conn->set_charset("utf8");
 
 $id_cabane = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
@@ -44,8 +46,8 @@ $cabane = $result->fetch_assoc();
                 </a>
                 <ul class="nav">
                     <li><a class="nav-link" href="cabanes.php">Nos cabanes</a></li>
-                    <li><a class="nav-link" href="services.html">Services</a></li>
-                    <li><a class="nav-link" href="apropos.html">A propos</a></li>
+                    <li><a class="nav-link" href="services.php">Services</a></li>
+                    <li><a class="nav-link" href="apropos.php">A propos</a></li>
                 </ul>
             </nav>
         </div>
@@ -76,6 +78,7 @@ $cabane = $result->fetch_assoc();
             </section>
         </section>
     </main>
+    <div id="footer-placeholder"></div>
 <script>
     function changeMainImage(element) {
         document.getElementById('main-img').src = element.src;
@@ -85,6 +88,6 @@ $cabane = $result->fetch_assoc();
 </html>
 
 <?php
-// Fermer la connexion
+
 $conn->close();
 ?>

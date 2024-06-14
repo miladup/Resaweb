@@ -284,3 +284,123 @@ h3 {
     margin-bottom: 10px;
     margin-top: 15px;
 }
+
+.search-container {
+    margin-left: 80px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.search-container label {
+    font-size: 1.5rem;
+    color: rgb(34, 67, 34);
+    margin-right: 10px;
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.search-container input[type="text"] {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 2px solid rgb(34, 67, 34);
+    background-color: rgb(245, 230, 203);
+    color: rgb(34, 67, 34);
+    font-family: 'Nunito', sans-serif;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(34, 67, 34);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.search-container button:hover {
+    background-color: rgb(26, 51, 26);
+}
+
+.sort-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.sort-options label, .search-container label {
+    font-size: 1.5rem;
+    color: rgb(34, 67, 34);
+    margin-right: 10px;
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.sort-options select, .search-container input[type="text"], .search-container button {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid rgb(34, 67, 34);
+    background-color: rgb(245, 230, 203);
+    color: rgb(34, 67, 34);
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container button {
+    background-color: rgb(34, 67, 34);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.search-container button:hover {
+    background-color: rgb(26, 51, 26);
+}
+
+.nav-link {
+    color: rgb(48, 29, 29);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.10em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    font-size: 1.48rem;
+    font-family: 'Happy Camper', sans-serif;
+}
+
+.nav-link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(37, 22, 22);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-link:hover:after {
+    width: 80%;
+    left: 10%;
+}
+
+.nav-link.active:after {
+    width: 80%;
+    left: 10%;
+}
